@@ -1,0 +1,47 @@
+{
+    "name": "tyhpdef/slim-psr7-impl",
+    "description": "Implementation package for tyhpdef/slim-psr7. Require tyhpdef/slim-psr7, not this package.",
+    "keywords": [
+        "dev",
+        "static analysis",
+        "internal"
+    ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "version": "1.8.0.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "tyhp": {
+            "interopContractVersion": 1,
+            "php-version": ">=8.2",
+            "require": {
+                "tyhpdef/php": "@dev",
+                "tyhpdef/psr-http-message": "@dev",
+                "tyhpdef/psr-http-factory": "@dev",
+                "tyhpdef/fig-http-message-util": "@dev"
+            },
+            "package": {
+                "include": [
+                    "./_tyhpdef/*.tyhpdef",
+                    "./_tyhpdef/extensions/*.tyhpdef"
+                ],
+                "overlay": [
+                    "./_tyhpdef/overlays/stubs/*.tyhpdef",
+                    "./_tyhpdef/overlays/*.tyhpdef"
+                ]
+            },
+            "public": "tyhpdef/slim-psr7"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "slim/psr7": "1.8.0"
+    },
+    "require-dev": {
+        "tyhpdef/php": "@dev",
+        "tyhpdef/psr-http-message": "@dev",
+        "tyhpdef/psr-http-factory": "@dev",
+        "tyhpdef/fig-http-message-util": "@dev"
+    }
+}
